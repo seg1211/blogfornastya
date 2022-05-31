@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import GlobalStyle from './globablStyles'
+import Blog from './pages/Blog'
+import { useLocation } from 'react-router-dom';
+import SinglePost from './pages/SinglePost';
+import Landing from './pages/Landing';
+import GeneralNav from './components/Navbar/Nav/GeneralNav'; 
+import {BrowserRouter as Router, 
+  Routes, 
+  Route
+} from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const location = useLocation();
+  return (<>
+    <GlobalStyle/>
+      <GeneralNav/>
+      <AnimatePresence>
+      <Routes location={location} key={location.key}>
+      <Route path="/" element={ <Landing/>} />
+      <Route path="/blog" element={ <Blog/>} />
+      <Route path='/blog/:slug' element={<SinglePost/>}/>
+      </Routes>
+      </AnimatePresence>
+    </>
   );
 }
 

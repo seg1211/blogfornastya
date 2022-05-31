@@ -1,0 +1,76 @@
+.Aboslute {
+    position: fixed;
+    width: 100vw;
+    height: 60vh;
+    margin-top: 15vh;
+}
+.MainImage {
+    
+    margin: auto;
+    height: 60vh;
+    padding-top: 1vh;
+    border-radius: 10%;
+}
+.SubImage {
+    position: absolute;
+    top: 0;
+    z-index: -3;
+    width: 100vw;
+    height: 63vh;
+    filter: blur(8px);
+}
+.topColor {
+    background-color: rgba(0, 0, 0, 0.39);
+    filter: blur(8px);
+    width: 100vw;
+    height: 62vh;
+    position: absolute;
+    z-index: -2;
+}
+.Title {
+    position: relative;
+    text-align: center;
+    transform: translateY(-1rem);
+    color: white;
+}
+.Main-text {
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 1%;
+    border: 1px solid black;
+    padding: 5%;
+    text-align: justify;
+    text-indent: 2vw;
+    margin-bottom: 2rem;
+}
+@media screen and (max-width: 450px){
+    .Main-text {
+        font-size: 0.9rem;
+        margin-left: 2%;
+        margin-right: 2%;
+        border: none;
+        text-align: left;
+    }
+    .Aboslute{
+        margin-top: 10vh;
+    }
+}
+.All-main {
+    background: white;
+    transform: translateY(80vh);
+    padding-top: 2rem;
+    
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+@media screen and (max-width: 700px) {
+    .Aboslute{
+        margin-top: 10vh;
+    }
+    .All-main{
+        transform: translateY(78vh);
+    }
+
+}
