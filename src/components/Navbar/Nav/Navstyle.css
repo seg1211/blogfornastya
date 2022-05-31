@@ -66,11 +66,7 @@
     padding: 10px;
     z-index: 2;
   }
-  @media (max-width: 500px) {
-    .Nav-phone-beforeExit {
-        height: 15vw; 
-    }
-  }
+
   .Nav-phone-beforeExit h2 {
     padding-right: 10vw;
     z-index: 2;
@@ -104,4 +100,15 @@
   .mobile-main {
     overflow: hidden;
     z-index: 2;
+  }
+  @media (max-width: 500px) {
+    .Nav-phone-beforeExit {
+        height: 15vw; 
+    }
+    .back {
+      width: 30%;
+    }
+    .mobile {
+      width: 70%;
+    }
   }
