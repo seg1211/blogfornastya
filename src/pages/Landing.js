@@ -1,5 +1,6 @@
 import React, {useRef} from 'react'
 import Background from '../video/back.mp4'
+import Backgr from '../video/backgr.png'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {Land, Vidos, Flex_col, Container, GButton, TomatoButton} from '../globablStyles'
@@ -31,7 +32,7 @@ function Landing() {
       initial='initial'
       exit='exit'>
         <Land>
-        <Vidos className='hero_video' autoPlay muted loop ref={videoRef}
+        <Vidos className='hero_video' autoPlay muted loop ref={videoRef} poster={Backgr}
         onCanPlay={() => setPlayBack()}>
         <source src={Background} type="video/mp4"></source>
         </Vidos>
