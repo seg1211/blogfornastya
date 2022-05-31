@@ -47,7 +47,7 @@ function Landing() {
             <div>
                 <Link to='/blog'>
                 <TomatoButton>
-                    My blogs
+                    My blog
                 </TomatoButton>
                 </Link>
                 {/* <GButton>
